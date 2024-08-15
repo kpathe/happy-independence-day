@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>78th Independence Day</title>
+    <style>
+      .flag {
+        width: 450px;
+        height: 300px;
+        display: grid;
+        /* align-items: center;
+        justify-content: center; */
+        border: 2px solid black;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      #saffron {
+        width: 450px;
+        height: 100px;
+        background-color: orange;
+      }
+
+      #white {
+        width: 450px;
+        height: 100px;
+        background-color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: blue;
+        font-size: 40px;
+      }
+
+      #green {
+        width: 450px;
+        height: 100px;
+        background-color: green;
+      }
+
+      .message {
+        display: grid;
+        justify-content: center;
+        text-align: center;
+        font-family: consolas;
+      }
+
+      body {
+        background-image: linear-gradient(
+          to bottom,
+          orange,
+          white,
+          white,
+          green
+        );
+        height: 100vh;
+        margin: 0;
+        color: navy;
+        font-family: Arial, sans-serif;
+      }
+
+      .rotate {
+        animation: rotation 30s infinite linear;
+      }
+
+      @keyframes rotation {
+        from {
+          transform: rotate(0deg);
+        }
+        to {
+          transform: rotate(360deg);
+        }
+      }
+
+      #audio {
+        display: flex;
+        justify-content: center;
+        margin: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="message" style="margin-bottom: 10px; margin-top: 20px">
+      <h1>स्वतंत्रता दिवस की हार्दिक शुभकामनाएं</h1>
+      <h2>१५ अगस्त २०२४</h2>
+    </div>
+
+    <div class="flag">
+      <div id="saffron"></div>
+      <div id="white">
+        <img
+          src="ashok-chakra.png"
+          width="100px"
+          alt=""
+          class="rotate"
+          id="play"
+        />
+      </div>
+      <div id="green"></div>
+    </div>
+
+    <div id="audio">
+      <audio controls autoplay id="myAudio" src="maatujhesalaam.mp3"></audio>
+    </div>
+    <script>
+      // Get the button element by its ID
+      const myButton = document.getElementById("play");
+
+      const audioElement = document.getElementById("myAudio");
+
+      // Add a click event listener
+      myButton.addEventListener("click", function () {
+
+        audioElement.currentTime = 74; // Play from 10 seconds
+
+        // Play the audio
+        audioElement.play();
+      });
+    </script>
+  </body>
+</html>
